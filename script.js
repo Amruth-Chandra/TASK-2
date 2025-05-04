@@ -1,4 +1,4 @@
-// --- Contact Form Validation ---
+
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', function(e) {
   e.preventDefault();
@@ -56,7 +56,7 @@ function addTask() {
   taskInput.focus();
 }
 
-// --- Image Gallery ---
+
 const imgInput     = document.getElementById('newImageUrl');
 const addImageBtn  = document.getElementById('addImageBtn');
 const imageGrid    = document.getElementById('imageGrid');
@@ -77,13 +77,13 @@ function addImage() {
   const wrapper = document.createElement('div');
   wrapper.className = 'image-item';
 
-  // Loading placeholder
+ 
   const placeholder = document.createElement('div');
   placeholder.textContent = 'Loading…';
   placeholder.className = 'loading-placeholder';
   wrapper.appendChild(placeholder);
 
-  // Create image and handle load/error
+  
   const img = new Image();
   img.alt = 'Gallery image';
   img.onload = () => wrapper.replaceChild(img, placeholder);
