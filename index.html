@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact, To‑Do & Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">MySite</div>
+    <ul class="nav-links">
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#todo">To‑Do</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <!-- Contact Form -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Name*</label>
+          <input type="text" id="name" name="name" required placeholder="Your name" />
+          <span class="error" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com" />
+          <span class="error" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your message…"></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- To‑Do List -->
+    <section id="todo">
+      <h2>My To‑Do List</h2>
+      <div class="todo-controls">
+        <input type="text" id="newTask" placeholder="New task…" />
+        <button id="addTaskBtn">Add</button>
+      </div>
+      <ul id="taskList"></ul>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallery">
+      <h2>My Image Gallery</h2>
+      <div class="gallery-controls">
+        <input type="url" id="newImageUrl" placeholder="Image URL…" />
+        <button id="addImageBtn">Add Image</button>
+      </div>
+      <div id="imageGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
